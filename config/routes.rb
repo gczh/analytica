@@ -1,4 +1,9 @@
 Analytica::Application.routes.draw do
+
+  root :to => 'products#hello'
+
+  get 'products/hello' => 'products#hello'
+  get 'products/goodbye' => 'products#goodbye'
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.

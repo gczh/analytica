@@ -1,0 +1,17 @@
+h1 Hello!
+
+p 
+	| It is now 
+	= @time
+
+p Glad to have you here.
+
+strong Some cool files:
+
+ul
+	- @files.each do |file|
+		li = file
+
+p 
+	| Time to say 
+	= link_to "Goodbye", products_goodbye_path

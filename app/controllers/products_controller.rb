@@ -1,6 +1,11 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+  def hello
+    @time = Time.now.strftime("%m/%d/%Y %I:%M%p")
+    @files = Dir.glob('*')
+  end
+
   # GET /products
   # GET /products.json
   def index
